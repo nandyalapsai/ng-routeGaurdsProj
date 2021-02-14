@@ -1,0 +1,13 @@
+#navbarNav{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item{
+    margin-right: 80px;
+}
+
+.keepactive{
+    border-bottom: 2px solid white;
+}
