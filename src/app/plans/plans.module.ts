@@ -4,8 +4,11 @@ import { MyPlansComponent } from './my-plans/my-plans.component';
 import { PlanInfoComponent } from './plan-info/plan-info.component';
 import { Routes, RouterModule } from '@angular/router';
 
+// {path:"plans",loadChildren: () => import('./plans/plans.module').then(m => m.PlansModule)}
 const routes: Routes = [
-  {path:"",component:MyPlansComponent}
+  {path:"",component:MyPlansComponent,resolve:[],children:[
+    {path:":id",component:PlanInfoComponent}
+  ]}
 ];
 
 @NgModule({

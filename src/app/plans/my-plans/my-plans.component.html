@@ -1,14 +1,12 @@
 <div class="row">
     <div class="col-6">
-        <ul class="list-group">
-            <li class="list-group-item active" aria-current="true">An active item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-            <li class="list-group-item">And a fifth one</li>
+        <ul class="list-group" *ngFor="let plan of plans; let i=index">
+            <li class="list-group-item" >
+                <a id="plan-info" [routerLink]="[i+'']">{{plan.name}}</a>
+            </li>
           </ul>
     </div>
-    <div class="col-6">
-        
+    <div class="col-6" id="info-box">
+        <router-outlet></router-outlet>
     </div>
 </div>
